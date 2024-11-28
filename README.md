@@ -65,6 +65,7 @@ The project is a website to manage a supermarket warehouse database. It allows u
 
 	###- RESTful API Routes:
 		- `GET /api/product/category/:category`
+		- `GET /api/product/name/:name`
 		- `POST /api/product/:productid`
 		- `GET /api/product/:productid`
 		- `PUT /api/product/:productid`
