@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('public/background2.jpeg'); 
+            background-position: center; 
+            margin: 0;
+            padding: 0;
+            color: black;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .header a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        .intro {
+            padding: 20px;
+        }
+        .intro img{
+            width: 100%;
+        }
+        .product-list {
+            padding: 20px;
+        }
+        .product-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .product-list th, .product-list td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f8f9fa;
+        }
+        .product-list th {
+            background-color: #f8f9fa;
+        }
+        .product-list .actions {
+            text-align: center;
+        }
+        .product-list .actions a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        .product-list img{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>Welcome, <%= name %>!</div>
+        <div>
+            <a href="/logout">Logout</a>
+            <a href="/create">Add Products</a>
+        </div>
+    </div>
+
+    <div class="intro">
+        <img src= 'public/line_vegetable.png' />
+        <h1>Introduction</h1>
+        <p>Welcome to Supermarket Product Management System! We are committed to assisting you to easily manage product
+             information as well as inventory status through efficient inventory management, providing customers with a 
+             reliable range of products. Below is the detailed product information.</p>
+    </div>
+
+    <div class="product-list">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Price (HKD)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% products.forEach(function(product) { %>
+                    <tr>
+                        <td><%= product.productId %></td>
+                        <td><%= product.name %></td>
+                        <td><%= product.category %></td>
+                        <td><%= product.quantity %></td>
+                        <td><%= product.price %></td>
+                        <td class="actions">
+                            <a href="/edit?id=<%= product._id %>">Edit</a>
+                            <a href="/delete?id=<%= product._id %>">Delete</a>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <img src = 'public/line_kiritori_sen.png' />
+    </div>
+</body>
+</html>

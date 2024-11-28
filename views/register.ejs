@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('public/background.jpg'); /*BG*/
+            background-size: cover; 
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .container input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .container button {
+            width: 20%;
+            padding: 10px;
+            background-color: #287da7;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .container button:hover {
+            background-color: #a799cf;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Create your own account!</h1>
+                <p>Minimum password length: 4</p>
+                <font color="red"><%= msg%></font>
+                </header>
+                <form action="/register" method="post">
+                <input type="text" placeholder="User name" name="name"><br>
+                <input type="password" placeholder="Password" name="password"><br>
+                <input type="password" placeholder="Confirm your password" name="passwordConfirm"><br>
+                <button type="submit" value="register">Sign up</button>
+                </form>
+            <p>Already have an account? <a href="/login">Login here</a></p>
+        </div>
+
+    </body>
+</html>

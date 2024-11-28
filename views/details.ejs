@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            background-image: url('public/background2.jpeg'); 
+            background-position: center; 
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .details {
+            margin: 20px 0;
+        }
+        a.button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        a.button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Product Details</h1>
+        <div class="details">
+            <p><strong>Product ID:</strong> <%= product.productid %></p>
+            <p><strong>Name:</strong> <%= product.name %></p>
+            <p><strong>Category:</strong> <%= product.category %></p>
+            <p><strong>Quantity:</strong> <%= product.quantity %></p>
+            <p><strong>Price (HKD):</strong> <%= product.price %></p>
+        </div>
+        <div class="actions">
+            <a class="button" href="/edit?productid=<%= product._id %>">Edit</a>
+            <a class="button" href="/delete?productid=<%= product._id %>">Delete</a>
+            <a class="button" href="/">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

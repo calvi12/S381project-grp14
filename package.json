@@ -1,0 +1,20 @@
+{
+    "name": "s381project-group14",
+    "description": "Group Project, develop a server-side application and deploy it on the cloud",
+    "author": "Chow Chi Chung 13664536, Peng Hai Chen, 13559724, Yao Yi Tong 13545375",
+    "version": "0.0.1",
+    "dependencies": {
+        "express": "*",
+        "ejs": "*",
+        "body-parser": "*",
+        "cookie-session": "*",
+        "nodemon": "*",
+        "mongoose": "*",
+        "express-formidable": "*",
+        "fs": "*"
+    },
+    "engine": "node >= 12.0.0",
+    "scripts": {
+        "start": "nodemon server"
+    }
+}
