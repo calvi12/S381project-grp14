@@ -75,8 +75,9 @@ The project is a website to manage a supermarket warehouse database. It allows u
 
 	###- CURL testing command: 
 	      - create: curl -X POST -H "Content-type:application/json" --data'{"productId":"005","name":"apple","category":"fruit","quantity":"10","price":"5"}'localhost:8099/api/product/005
-	      - find: curl -X GET http://localhost:8099/api/product/123
-		  - find: curl -X GET http://localhost:8099/api/product/category/food
+	      - find by id: curl -X GET http://localhost:8099/api/product/123
+		  - find by category: curl -X GET http://localhost:8099/api/product/category/food
+		  - find by name: curl -X GET http://localhost:8099/api/product/name/cake
 	      - update: curl -X PUT -H "Content-Type:application/json" --data'{"name":"cake","category":"food","quantity":"19","price":"10"}'localhost:8099/api/product/123
 	      - delete: curl -X DELETE localhost:8099/api/product/002
 

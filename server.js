@@ -329,6 +329,22 @@ app.get('/api/product/category/:category', async(req, res) => {
     }
 })
 
+//Find by name
+app.get('/api/product/name/:name', async(req, res) => {
+    if(req.params.name){
+        console.log(req.body);
+        let criteria = {};
+        criteria['name'] = req.params.name;
+        await client.connect();
+        console.log("Connected successflly to server");
+        const db = client.db(dbName);
+        const docs = await findDocument(db, criteria);
+        res.status(200).json(docs);
+    }else{
+        res.status(500).json({"error": "missing name"}).end();
+    }
+})
+
 //Update
 app.put('/api/product/:productid', async(req, res) =>{
     if(req.params.productid){
