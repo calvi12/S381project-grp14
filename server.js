@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 const session = require('cookie-session');
 // mongodb driver (connection string)
-const uri = 'mongodb+srv://calvinchow:Butterfly119@cluster0.dxz6f.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0' 
+const uri = '' 
 const {MongoClient, ServerApiVersion, ObjectId} = require('mongodb');
 const client = new MongoClient(uri, {
     serverApi: {
