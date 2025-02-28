@@ -13,7 +13,7 @@ The project is a website to manage a supermarket warehouse database. It allows u
 ```
 .
 ├── models/
-│   ├── productModel.js    # product attribute
+│   ├── productModel.js  # product attribute
 │   └── userModel.js     # define the architecture of the user model in mongodb database
 ├── views/
 │   ├── create.ejs       # create shop product information page
