@@ -8,8 +8,10 @@ The project is a website to manage a supermarket warehouse database. It allows u
 
 # Participating students: 13664536 Chow Chi Chung, 13545375 Yao Yi Tong, 13559724 Peng Hai chen
 
-#Project file intro:
+# Folder Structure:
 
+```
+.
 ├── models/
 │   ├── productModel.js    # product attribute
 │   └── userModel.js     # define the architecture of the user model in mongodb database
@@ -30,6 +32,7 @@ The project is a website to manage a supermarket warehouse database. It allows u
 ├── server.js            # main application file(description below)
 ├── package.json         # Basic information about server.js
 └── README.md            # project information document
+```
 
    ##- server.js: Identified 8099 as the port, connected to mongodb, introduced the user and product models, set ejs as the view engine, use session to manage user sessions, provide user authentication, product management, provide RESTful API interface to add, delete, find and change products in this interface, can handle variety of error condition.
 
