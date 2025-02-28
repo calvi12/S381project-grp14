@@ -1,16 +1,15 @@
 #S381F group
 
-# shop management system
+# Shop Management System
 
 The project is a website to manage a supermarket warehouse database. It allows users to perform CRUD (Create, Read, Update, Delete) operations on data and supports user authentication through registration and login, logout operations can also be performed, and the application can connect to a MongoDB database to store and retrieve data.
 
 # group 14 
 
-# Participating students: 13664536 Chow ChiChung,13545375 Yao YiTong,13559724 Peng Haichen
+# Participating students: 13664536 Chow Chi Chung, 13545375 Yao Yi Tong, 13559724 Peng Hai chen
 
 #Project file intro:
 
-.
 ├── models/
 │   ├── productModel.js    # product attribute
 │   └── userModel.js     # define the architecture of the user model in mongodb database
